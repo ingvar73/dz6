@@ -6,7 +6,8 @@
  * Time: 16:21
  */
 
-class Controller_404 extends Controller {
+class Controller_404 extends Controller
+{
 
     public function action_index()
     {
@@ -14,3 +15,4 @@ class Controller_404 extends Controller {
             "title" => "404 - Ошибка"
         ));
     }
+}

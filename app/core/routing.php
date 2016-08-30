@@ -42,19 +42,18 @@ class Routing
         $action = $actionName;
 
         if (method_exists($controller, $action)){
-            call_user_func(array($controller, $actionName), $pieceOfUrl);
+//            call_user_func(array($controller, $actionName), $pieceOfUrl);
+            $controller->$action();
         } else {
             // обработка ошибки
             Routing::ErrorPage404();
         }
+    }
 
-        static function ErrorPage404(){
-            $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
-            header('HTTP/1.1 404 Not Found');
-            header('Status: 404 Not Found');
-            header('Location:'.$host.'404');
-        }
-
-
+    static function ErrorPage404(){
+        $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
+        header('HTTP/1.1 404 Not Found');
+        header('Status: 404 Not Found');
+        header('Location:'.$host.'404');
     }
 }
