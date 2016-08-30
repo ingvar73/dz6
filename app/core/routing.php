@@ -23,5 +23,28 @@ class Routing
         $controllerName = 'Controller_'.$controllerName;
         $actionName = 'action_'.$actionName;
         $fileWithModel = strtolower($modelName).'.php';
+        $fileWithModelPath = "app/models/".$fileWithModel;
+
+        if (file_exists($fileWithModelPath)){
+            include $fileWithModelPath;
+        }
+        $fileWithController = strtolower($controllerName).'.php';
+        $fileWithControllerPath = "app/controllers/".$fileWithController;
+        if (file_exists($fileWithControllerPath)){
+            include $fileWithControllerPath;
+        } else {
+            // нужно добавить обработку ошибки
+            // к примеру перекинуть пользователя на страницу 404.php
+        }
+
+        $controller = new $controllerName;
+        $action = $actionName;
+
+        if (method_exists($controller, $action)){
+            call_user_func(array($controller, $actionName), $pieceOfUrl);
+        } else {
+            // обработка ошибки
+        }
+
     }
 }
