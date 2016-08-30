@@ -35,6 +35,7 @@ class Routing
         } else {
             // нужно добавить обработку ошибки
             // к примеру перекинуть пользователя на страницу 404.php
+            Routing::ErrorPage404();
         }
 
         $controller = new $controllerName;
@@ -44,7 +45,16 @@ class Routing
             call_user_func(array($controller, $actionName), $pieceOfUrl);
         } else {
             // обработка ошибки
+            Routing::ErrorPage404();
         }
+
+        static function ErrorPage404(){
+            $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
+            header('HTTP/1.1 404 Not Found');
+            header('Status: 404 Not Found');
+            header('Location:'.$host.'404');
+        }
+
 
     }
 }
