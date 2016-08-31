@@ -25,6 +25,8 @@ class Routing
         $fileWithModel = strtolower($modelName).'.php';
         $fileWithModelPath = "app/models/".$fileWithModel;
 
+        print_r($fileWithModelPath);
+
         if (file_exists($fileWithModelPath)){
             include $fileWithModelPath;
         }

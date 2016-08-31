@@ -8,6 +8,6 @@
 
 class Model{
     public function get(){
-        return true;
+
     }
 }

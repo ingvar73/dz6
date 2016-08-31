@@ -16,10 +16,6 @@ class Controller
     }
 
     function action_index(){
-        $this -> view -> generate('myview', 'index.php');
-    }
 
-//    function action_default(){
-//        echo "Action Default";
-//    }
+    }
 }
