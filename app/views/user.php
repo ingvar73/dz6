@@ -5,6 +5,12 @@
  * Date: 30.08.2016
  * Time: 23:08
  */
+error_reporting(E_ALL);
+session_start();
+
+include ("/components/db.php");
+
+
 
 ?>
 
@@ -15,6 +21,7 @@
     <title>Система регистрации и авторизации</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -35,16 +42,18 @@
                     if (isset($myrow['avatar']) or $myrow['avatar'] == ''){
 
 
-                        if (isset($_COOKIE['login'])) //есть ли переменная с логином в COOKIE. Должна быть, если пользователь при предыдущем входе нажал на чекбокс "Запомнить меня"
+                        if (isset($_COOKIE['login'])) //есть ли переменная с логином в COOKIE.
+                        // Должна быть, если пользователь при предыдущем входе нажал на чекбокс "Запомнить меня"
                         {
-                            //если да, то вставляем в форму ее значение. При этом пользователю отображается, что его логин уже вписан в нужную графу
+                            //если да, то вставляем в форму ее значение.
+                            // При этом пользователю отображается, что его логин уже вписан в нужную графу
                             echo    ' value="'.$_COOKIE['login'].'">';
                         }
 
                         print <<<HERE
 
 <!-- Между оператором "print <<<HERE" выводится html код с нужными переменными из php -->
-            Вы вошли на сайт, как $_SESSION[login] (<a href='exit.php'>выход</a>)<br>
+            Вы вошли на сайт, как $_SESSION[login] (<a href='/'>выход</a>)<br>
             <!-- выше ссылка на выход из аккаунта -->
 
             Ваш аватар:<br>

@@ -25,8 +25,6 @@ class Routing
         $fileWithModel = strtolower($modelName).'.php';
         $fileWithModelPath = "app/models/".$fileWithModel;
 
-//        print_r($fileWithModelPath);
-
         if (file_exists($fileWithModelPath)){
             include $fileWithModelPath;
         }
@@ -35,10 +33,9 @@ class Routing
         if (file_exists($fileWithControllerPath)){
             include $fileWithControllerPath;
         } else {
-            // Р’С‹РІРѕРґ РѕС€РёР±РєРё
-            //  404.php
+            // нужно добавить обработку ошибки
+            // к примеру перекинуть пользователя на страницу 404.php
             Routing::ErrorPage404();
-//            echo "РћС€РёР±РєР° 404";
         }
 
         $controller = new $controllerName;
@@ -48,8 +45,7 @@ class Routing
 //            call_user_func(array($controller, $actionName), $pieceOfUrl);
             $controller->$action();
         } else {
-            // РІС‹РІРѕРґ РѕС€РёР±РєРё
-//            echo "РћС€РёР±РєР° 404";
+            // обработка ошибки
             Routing::ErrorPage404();
         }
     }
