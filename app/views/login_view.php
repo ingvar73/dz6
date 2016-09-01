@@ -1,6 +1,6 @@
     <section id="form_input">
         <div class="container">
-            <div class="row">
+            <div class="block">
                 <div class="col-md8 col-md-offset-1">
                     <form method=POST action="">
                         <div class="form-inline">
