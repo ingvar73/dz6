@@ -10,7 +10,7 @@ class Controller_User extends Controller
 {
 	public function __construct()
 	{
-		$this->model = new Model_Login();
+		$this->model = new Model_User();
 		$this->view = new View();
 	}
 
