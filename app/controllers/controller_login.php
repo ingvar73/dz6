@@ -10,6 +10,6 @@ class Controller_Login extends Controller
 {
     public function action_index()
     {
-        $this->view->generate('Страница Входа', 'login.php');
+		$this->view->generate('login_view.php', 'template_view.php');
     }
 }

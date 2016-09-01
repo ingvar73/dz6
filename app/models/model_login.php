@@ -6,7 +6,7 @@
  * Time: 3:53
  */
 
-class Validate
+class Model_Login
 {
 	public function __construct () //Инициализируем методы
 	{
@@ -23,5 +23,10 @@ class Validate
 			$this->result = false;
 			return $this->result;
 		}
+	}
+
+	public function db_connect()
+	{
+
 	}
 }
