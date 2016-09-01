@@ -5,7 +5,8 @@
  * Date: 30.08.2016
  * Time: 23:07
  */
-require_once 'vendor/composer' . '/autoload_real.php';
+//require_once 'vendor/composer' . '/autoload_real.php';
+
 
 ?>
 
@@ -34,7 +35,7 @@ require_once 'vendor/composer' . '/autoload_real.php';
         <div class="container">
             <div class="row">
                 <div class="col-md8 col-md-offset-1">
-                    <form method=POST action="login.php">
+                    <form method=POST action="">
                         <div class="form-inline">
                             <input type="text" name="login" class="form-control" placeholder="Введите логин" value="<?php echo @$fdata['login'];?>">
                         </div>

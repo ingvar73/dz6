@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md8 col-md-offset-1">
-                    <form method=POST action="/registration" enctype="multipart/form-data">
+                    <form method=POST action="" enctype="multipart/form-data">
                         <div class="form-inline">
                             <input type="text" name="login" class="form-control" placeholder="| Login" value="<?php echo @$fdata['login'];?>">
                         </div><br />

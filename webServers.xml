@@ -1,0 +1,18 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1de4deed-4b59-4da3-a676-4f51c1261551" name="homew" url="http://localhost">
+        <fileTransfer accessType="LOCAL" />
+      </webServer>
+      <webServer id="cdc269d8-9e9f-43f6-9a4a-2d15a9880c4a" name="DZ-Loftschool" url="http://localhost/dz1">
+        <fileTransfer accessType="LOCAL" />
+      </webServer>
+      <webServer id="080cc859-599e-4448-9f71-dc5402071e8e" name="DZ5 - MVC" url="http://dz5">
+        <fileTransfer accessType="LOCAL" />
+      </webServer>
+      <webServer id="21700b76-765e-4ebf-9472-c73a3fa1adcc" name="DZ4" url="http://dz4.loc">
+        <fileTransfer port="0" accessType="LOCAL" />
+      </webServer>
+    </option>
+  </component>
+</application>

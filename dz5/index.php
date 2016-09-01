@@ -1,0 +1,6 @@
+<?php
+//Front controller
+
+// 1. Общие настройки
+ini_set('display_errors', 1);
+require_once 'app/load.php';
