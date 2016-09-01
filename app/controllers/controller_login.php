@@ -17,7 +17,7 @@ class Controller_Login extends Controller
 
 	public function action_index()
     {
-    	$data = $this->model->get_data();
-		$this->view->generate('login_view.php', 'template_view.php', $data);
+//    	$data = $this->model->get_data();
+		$this->view->generate('login_view.php', 'template_view.php');
     }
 }
