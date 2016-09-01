@@ -10,7 +10,6 @@
     <file url="file://$PROJECT_DIR$/app/load.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/404.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/index.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/main_template.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/components/Db.php" charset="UTF-8" />
   </component>
 </project>
