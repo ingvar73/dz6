@@ -8,8 +8,11 @@
  */
 class Controller_Registration extends Controller
 {
+	public $data;
+
     public function action_index()
     {
+    	$data = $_POST;
 		$this->view->generate('reg_view.php', 'template_view.php');
     }
 }
