@@ -7,7 +7,7 @@
  */
 return array(
     'host' => 'localhost',
-    'dbname' => 'userd',
+    'dbname' => 'gbook',
     'user' => 'root',
     'password' => '',
 );

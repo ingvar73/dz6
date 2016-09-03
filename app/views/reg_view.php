@@ -2,7 +2,7 @@
         <div class="container">
             <div class="block">
                 <div class="col-md8 col-md-offset-1">
-                    <form method=POST action="" enctype="multipart/form-data">
+                    <form method=POST action="reg/reg" enctype="multipart/form-data">
                         <div class="form-inline">
                             <input type="text" name="login" class="form-control" placeholder="| Login" value="<?php echo @$fdata['login'];?>">
                         </div><br />
@@ -19,14 +19,14 @@
                             <input type="password" name="password" class="form-control" placeholder="| Пароль">
                         </div><br />
                         <div class="form-inline">
-                            <input type="password" name="password1" class="form-control" placeholder="| Повторите пароль">
+                            <input type="password" name="cpassword" class="form-control" placeholder="| Повторите пароль">
                         </div><br />
                         <div class="form-inline">
                             <label for="InputFile">Загрузить изображение</label>
                             <input type="file" name="avatar">
                         </div><br />
-                        <button type="submit" name="login" class="btn btn-default" value="Регистрация">Регистрация</button>
-                    </form>
+                        <button type="submit" name="enter" class="btn btn-default" value="Регистрация">Регистрация</button>
+                    </form><br />
                 </div>
             </div>
         </div>
