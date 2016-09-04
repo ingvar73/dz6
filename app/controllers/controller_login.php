@@ -42,11 +42,14 @@ class Controller_Login extends Controller
 					print ("Пользователь авторизован!");
 					$_SESSION["login"] = $login;
 					$_SESSION["password"] = $pass;
-					if(isset($_POST['login'])) {
-						$_COOKIE['login'] = $_SESSION["login"];
-					} else {
-						unset($_COOKIE['login']);
-					}
+					/**
+					 * Обработка чекбокса - пока отключил
+					 */
+//					if(isset($_POST['login'])) {
+//						$_COOKIE['login'] = $_SESSION["login"];
+//					} else {
+//						unset($_COOKIE['login']);
+//					}
 					Model_Redirect::redirectToPage('user/');
 				} else {
 					echo '<div style="background-color: lightblue; color: green;">Пользователь не зарегистрирован или пароль введен неверно!</div><hr />';

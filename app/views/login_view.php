@@ -8,7 +8,7 @@
                         </div>
                         <div class="form-inline">
                             <input type="password" name="password" class="form-control" placeholder="Введите пароль"><br />
-                            <input type="checkbox" checked="checked" name="login"/>Оставаться в системе
+<!--                            <input type="checkbox" checked="checked" name="login"/>Оставаться в системе-->
                         </div>
                         <button type="submit" name="enter" class="btn btn-default navbar-btn" value="Вход">Вход</button>
                     </form><br />

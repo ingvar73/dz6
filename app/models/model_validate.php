@@ -38,8 +38,8 @@ class Model_Validate extends Model
 	// проверка логина на валидность: размер логина, очистка от спец-символов
 	public function ver_login($login){
 		$this->login = strip_tags(trim($login));
-		if(strlen(htmlspecialchars($this->login)) < 1 || strlen(htmlspecialchars($this->login)) > 15){
-			echo "ОШИБКА! Длина логина должна быть не менее 6 и не более 15 символов!\n";
+		if(strlen(htmlspecialchars($this->login)) < 3 || strlen(htmlspecialchars($this->login)) > 15){
+			echo "ОШИБКА! Длина логина должна быть не менее 3 и не более 15 символов!\n";
 			$this->result = false;
 			return $this->result;
 		}
@@ -51,7 +51,7 @@ class Model_Validate extends Model
 	public function ver_name($name){
 		$this->name = $name;
 		if(mb_strlen($this->name) < 3 || mb_strlen($this->name) > 20){
-			echo "ОШИБКА! Длина имени должна быть не менее 6 и не более 20 символов!\n";
+			echo "ОШИБКА! Длина имени должна быть не менее 3 и не более 20 символов!\n";
 			$this->result = false;
 			return $this->result;
 		}

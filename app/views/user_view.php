@@ -4,7 +4,7 @@
             <h1>Вы авторизованы!</h1>
             <h3>
                 <?php
-                if (isset($myrow['avatar']) or $myrow['avatar'] == ''){
+                if (isset($data['avatar']) or $data['avatar'] == ''){
 
 
                     if (isset($_COOKIE['login'])) //есть ли переменная с логином в COOKIE. Должна быть,
@@ -22,7 +22,7 @@ print <<<HERE
             <!-- выше ссылка на выход из аккаунта -->
 
             Ваш аватар:<br>
-            <img alt='$_SESSION[login]' src='$myrow[avatar]'>
+            <img alt='$_SESSION[login]' src='../$data[avatar]'>
 HERE;
                 }
                 ?></h3>

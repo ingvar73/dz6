@@ -12,8 +12,6 @@ include_once(ROOT.'/app/models/model_redirect.php');
 
 class Controller_User extends Controller
 {
-	public $myrow;
-
 	public function __construct()
 	{
 		session_start();
@@ -23,21 +21,9 @@ class Controller_User extends Controller
 
 	public function action_index()
     {
-//    	$data = $this->model->get_data();
+    	$data = $this->model->action_index();
+//		var_dump($data);
 
-		include_once (ROOT.'/components/db.php');
-		if    (!empty($_SESSION['login']) and !empty($_SESSION['password']))
-		{
-			//если существует логин и пароль в сессиях, то проверяем их и извлекаем аватар
-
-			$login = $_SESSION['login'];
-			$password = $_SESSION['password'];
-			$result_sql = "SELECT id,avatar FROM users WHERE login='$login' AND password='$password'";
-			$result = $mysql->query($result_sql) or die("ERROR: ".$mysql->error);
-			$myrow = $result->fetch_array(MYSQLI_ASSOC);
-    var_dump($myrow);
-			//извлекаем нужные данные о пользователе
-			$this->view->generate('user_view.php', 'template_view.php', $myrow);
+			$this->view->generate('user_view.php', 'template_view.php', $data);
 		}
-    }
 }
