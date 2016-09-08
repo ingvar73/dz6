@@ -6,9 +6,9 @@
  * Date: 30.08.2016
  * Time: 23:49
  */
-include_once(ROOT.'/app/models/model_user.php');
-include_once(ROOT.'/app/models/model_validate.php');
-include_once(ROOT.'/app/models/model_redirect.php');
+include_once('app/models/model_user.php');
+include_once('app/models/model_validate.php');
+//include_once(ROOT.'/app/models/model_redirect.php');
 
 class Controller_User extends Controller
 {
